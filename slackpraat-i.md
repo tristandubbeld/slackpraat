@@ -7,8 +7,10 @@
 [Passing data](#passing-data)<br>
 [ReactCSSTransitionGroup](#reactcsstransitiongroup)<br>
 [Sonarqube error](#sonarqube-error)<br>
-[ngrok](#ngrok)<br>
-[Showing and hiding components or html](#showing-and-hiding-components-or-html)
+[ngrok](#ngrok) TODO<br>
+[Showing and hiding components or html](#showing-and-hiding-components-or-html)<br>
+[Less complex render functions](#less-complex-render-functions)<br>
+[What to use as key](#what-to-use-as-key)
 
 ## Data flow in React
 
@@ -173,3 +175,47 @@ TODO
 ```
 
 It says boolean, but does not have to be a boolean. Can be a string / object / whatever. It will be `true` when it has a value and `false` when the value is `null`.
+
+## Less complex render functions
+
+Inside the components render function:
+
+```javascript
+{boolean && this.renderSpecificComponent()}
+```
+
+Outside the components render function is another function, called `renderSpecificComponent`:
+
+```javascript
+renderSpecificComponent() {
+  const { property } = this.props;
+
+  return (
+    <div>Specific stuff</div>
+  );
+}
+```
+
+Splits the logic, makes it easier to read and you won't get Sonarqube complex function issues: `Function has a complexity of 11 which is greater than 10 authorized.`
+
+## What to use as key
+
+How we used to do it (this is an anti pattern):
+
+```javascript
+array.map((item, index) => {
+  return (
+    <Component key={index} stuff={item} />
+  );
+});
+```
+
+Why is this wrong? Because the order of your rendered components could change.
+
+### Solution?
+
+To discuss
+
+#### Links
+
+[Index as a key is an anti-pattern](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318)
