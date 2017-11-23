@@ -10,7 +10,8 @@
 [ngrok](#ngrok) TODO<br>
 [Showing and hiding components or html](#showing-and-hiding-components-or-html)<br>
 [Less complex render functions](#less-complex-render-functions)<br>
-[What to use as key](#what-to-use-as-key)
+[What to use as key](#what-to-use-as-key)<br>
+[To chain or not to chain](#to-chain-or-not-to-chain)
 
 ## Data flow in React
 
@@ -219,3 +220,37 @@ To discuss
 #### Links
 
 [Index as a key is an anti-pattern](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318)
+
+## To chain or not to chain
+
+How would you write this?
+
+```javascript
+
+values = {
+  "question-1": "10",
+  "question-2": "20"
+}
+
+// no chain
+
+const entries = Object.entries(values);
+
+const scores = entries.map(entry => {
+  return parseInt(entry[1], 10);
+});
+
+const total = scores.reduce((acc, cur) => {
+  return acc + cur;
+});
+
+// yes chain
+
+const total = Object.entries(values)
+  .map(entry => {
+    return parseInt(entry[1], 10);
+  })
+  .reduce((acc, cur) => {
+    return acc + cur;
+  });
+```
