@@ -131,13 +131,21 @@ class Header extends Component {
 }
 ```
 
-## ReactCSSTransitionGroup
+## CSSTransitionGroup
 
-Renders a `<span>` around the child. This troubles grids and layouts. But you can add a className to the `ReactCSSTransitionGroup`:
+Renders a `<span>` around the child. This troubles grids and layouts. But you can add a className to the `CSSTransitionGroup`:
 
 ```javascript
-<ReactCSSTransitionGroup className="o-layout">
+<CSSTransitionGroup className="o-layout">
 ```
+
+Sometimes the span interferes with your layout. In these cases you can even change the wrapper element:
+```javascript
+<CSSTransitionGroup component="ul" className="o-layout">
+```
+
+Please note that this only applies to CCSTranstitionGroup v1. React-transition-group was largely refactored in version 2.
+More information about react-transition-group v1 can be found here: https://github.com/reactjs/react-transition-group/tree/v1-stable
 
 ## Sonarqube error
 
