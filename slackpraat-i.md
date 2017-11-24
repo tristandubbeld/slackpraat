@@ -5,10 +5,10 @@
 [Destructuring](#destructuring)<br>
 [Functional component](#functional-component)<br>
 [Passing data](#passing-data)<br>
-[ReactCSSTransitionGroup](#reactcsstransitiongroup)<br>
+[CSSTransitionGroup](#csstransitiongroup)<br>
 [Sonarqube error](#sonarqube-error)<br>
 [ngrok](#ngrok)<br>
-[Showing and hiding components or html](#showing-and-hiding-components-or-html)<br>
+[Showing and hiding components or html (conditonal rendering)](#showing-and-hiding-components-or-html-conditonal-rendering)<br>
 [Less complex render functions](#less-complex-render-functions)<br>
 [What to use as key](#what-to-use-as-key)<br>
 [To chain or not to chain](#to-chain-or-not-to-chain)
@@ -211,7 +211,7 @@ For more information on ngrok: https://ngrok.com/
 Happy testing!
 
 
-## Showing and hiding components or html
+## Showing and hiding components or html (conditonal rendering)
 
 `if`
 
@@ -232,6 +232,8 @@ Happy testing!
 ```
 
 It says boolean, but does not have to be a boolean. Can be a string / object / whatever. It will be `true` when it has a value and `false` when the value is `null`.
+
+More information on conditonal rendering can be found here: https://reactjs.org/docs/conditional-rendering.html
 
 ## Less complex render functions
 
