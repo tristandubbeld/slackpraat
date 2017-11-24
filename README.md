@@ -1,9 +1,11 @@
 # slackpraat
 A repo for markdown files in which interesting Slack conversation subjects are covered.
 
-### Slackpraat I
+| Part             | Subjects                   | File                    | Date          |
+| ---------------- | -------------------------- | ----------------------- | ------------- |
+| **Slackpraat I** | [Subjects](#slackpraat-i)  | [Link](slackpraat-i.md) | November 2017 |
 
-Check it out [here](slackpraat-i.md).
+### Slackpraat I
 
 - Data flow in React
 - Destructuring
@@ -16,3 +18,5 @@ Check it out [here](slackpraat-i.md).
 - Less complex render functions
 - What to use as key
 - To chain or not to chain
+
+Check it out [here](slackpraat-i.md).
