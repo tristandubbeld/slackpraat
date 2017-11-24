@@ -7,7 +7,7 @@
 [Passing data](#passing-data)<br>
 [ReactCSSTransitionGroup](#reactcsstransitiongroup)<br>
 [Sonarqube error](#sonarqube-error)<br>
-[ngrok](#ngrok) TODO<br>
+[ngrok](#ngrok)<br>
 [Showing and hiding components or html](#showing-and-hiding-components-or-html)<br>
 [Less complex render functions](#less-complex-render-functions)<br>
 [What to use as key](#what-to-use-as-key)<br>
@@ -153,7 +153,55 @@ Thoughts?
 
 ## ngrok
 
-TODO
+Great little tool for bypassing firewalls. Very helpful for testing on mobile devices and/or showing your work to colleagues that don't have access to your test environment.
+
+Start by installing the npm package (globally)
+```
+npm install ngrok -g
+```
+
+You can run ngrok directly from your command line:
+
+```
+ngrok http -host-header=<localhost> <local port>
+
+// Forwarding your local sitecore instance
+ngrok http -host-header=www.localeneco.nl 80
+
+// Forwarding storybook
+ngrok http -host-header=localhost 9003
+```
+
+This will show a terminal interface providing you with a url that you can share or open on your mobile devices. In the example below the url is `http://352cdb00.ngrok.io`
+```
+ngrok by @inconshreveable                                                                                                                                                                                                                           (Ctrl+C to quit)
+
+Session Status                online
+Version                       2.2.8
+Region                        United States (us)
+Web Interface                 http://127.0.0.1:4040
+Forwarding                    http://352cdb00.ngrok.io -> localhost:9003
+Forwarding                    https://352cdb00.ngrok.io -> localhost:9003
+
+Connections                   ttl     opn     rt1     rt5     p50     p90
+                              0       3       0.00    0.00    0.00    0.00
+
+HTTP Requests
+-------------
+
+GET /favicon.ico                                200 OK
+GET /static/fonts/etelka-light.woff2            200 OK
+GET /static/fonts/etelkamediumpro-webfont.woff2 200 OK
+GET /__webpack_hmr
+GET /static/preview.bundle.js                   200 OK
+GET /iframe.html                                200 OK
+GET /static/manager.bundle.js                   200 OK
+GET /                                           200 OK
+```
+
+For more information on ngrok: https://ngrok.com/
+Happy testing!
+
 
 ## Showing and hiding components or html
 
