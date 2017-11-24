@@ -199,6 +199,15 @@ renderSpecificComponent() {
 
 Splits the logic, makes it easier to read and you won't get Sonarqube complex function issues: `Function has a complexity of 11 which is greater than 10 authorized.`
 
+Also, from stackoverflow:
+> A function in the render method will be created each render which is a slight performance hit. It's also messy if you put them in the render, which is a much bigger reason, you shouldn't have to scroll through code in render to see the html output. Always put them on the class instead.
+
+> For stateless components, it's probably best to keep functions outside of the main function and pass in props instead, otherwise the function will be created each render too. I haven't tested performance so I don't know if this is a micro-optimization but it's worth noting.
+
+#### Links
+
+[React functions inside render](https://stackoverflow.com/questions/41369296/react-functions-inside-render)
+
 ## What to use as key
 
 How we used to do it (this is an anti pattern):
