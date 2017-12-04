@@ -1,10 +1,11 @@
 # slackpraat
 A repo for markdown files in which interesting Slack conversation subjects are covered.
 
-| Part             | Subjects                   | File                    | Date          |
-| :--------------- | :------------------------- | :---------------------- | :------------ |
-| **Slackpraat I** | [Subjects](#slackpraat-i)  | [Link](slackpraat-i.md) | November 2017 |
-|                  |                            |                         |               |
+| Part              | Subjects                    | File                     | Date          |
+| :---------------- | :-------------------------- | :----------------------- | :------------ |
+| **Slackpraat I**  | [Subjects](#slackpraat-i)   | [Link](slackpraat-i.md)  | November 2017 |
+| **Slackpraat II** | [Subjects](#slackpraat-ii)  | [Link](slackpraat-ii.md) | December 2017 |
+|                   |                             |                          |               |
 
 ### Slackpraat I
 
@@ -21,3 +22,9 @@ A repo for markdown files in which interesting Slack conversation subjects are c
 - To chain or not to chain
 
 Check it out [here](slackpraat-i.md).
+
+### Slackpraat II
+
+- NodeList IE bug
+
+Check it out [here](slackpraat-ii.md).
